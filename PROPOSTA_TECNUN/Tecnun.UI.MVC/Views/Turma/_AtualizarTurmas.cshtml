@@ -1,0 +1,31 @@
+﻿@model Tecnun.Applications.Model.TurmaViewModel
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">
+        <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+    </button>
+    <h4 class="modal-title">Atualizar Turma</h4>
+</div>
+
+<div class="modal-body">
+    @using (Html.BeginForm())
+    {
+
+        @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.Hidden("TurmaId", (Guid?)ViewBag.TurmaId)
+        @Html.Hidden("_ProfessorId", (Guid?)ViewBag._ProfessorId)
+        @Html.HiddenFor(model => model.PeriodoTurma, new { id = "_periodoturma" })
+        @Html.HiddenFor(model => model.ProfessorId, new { id = "_professorid" })
+        @Html.Hidden("Nome", (string)ViewBag.Nome)
+        @Html.Partial("_TurmaEditar")
+
+        <div class="modal-footer">
+            <input type="submit" value="Atualizar" class="btn btn-primary" id="_atualizarturma" />
+            <input type="button" class="btn btn-danger" data-dismiss="modal" value="Fechar" />
+        </div>
+    </div>
+    }
+</div>
