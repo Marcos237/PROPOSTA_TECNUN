@@ -173,6 +173,7 @@
     <Compile Include="App_Start\SimpleInjectorInitializer.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfessorController.cs" />
+    <Compile Include="Controllers\TesteController.cs" />
     <Compile Include="Controllers\TurmaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -424,6 +425,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Teste\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

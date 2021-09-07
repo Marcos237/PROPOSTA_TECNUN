@@ -15,6 +15,8 @@ namespace Tecnun.UI.MVC.Controllers
         public HomeController(IAlunoAppService alunoappservice)
         {
             _alunoappservice = alunoappservice;
+
+            // teste
         }
 
         public ActionResult Index(string buscar, int pageNumber = 1)
